@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="ESP32_SERVER.Pages.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ESP32_SERVER.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <ScrollView VerticalAlignment="Stretch">
+
+                <GridView x:Name="CctcCamerasGridView"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      ScrollViewer.HorizontalScrollMode="Disabled"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                      ScrollViewer.VerticalScrollMode="Disabled"
+                      ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                      TabIndex="1"
+                      IsItemClickEnabled="False"
+                      SelectionMode="None"
+                      IsSwipeEnabled="False"
+                      CanReorderItems="False"
+                      CanDragItems="False"
+                      AllowDrop="False"
+                      ItemsSource="{x:Bind ViewModel.CamerasUrls, Mode=OneWay}">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+
+                        <WebView2 x:Name="cameraOneWebView"
+                                  Source="{Binding Url, Mode=OneWay}"
+                                  DefaultBackgroundColor="Black"
+                                  Width="200" Height="200"/>
+
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+
+        </ScrollView>
+
+    </Grid>
+
+</Page>

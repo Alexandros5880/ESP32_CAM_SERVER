@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="ESP32_SERVER.Windows.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ESP32_SERVER.Windows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+
+        <NavigationView x:Name="NavigationView"
+                        PaneDisplayMode="Auto"
+                        IsBackButtonVisible="auto"
+                        IsBackEnabled="True"
+                        IsSettingsVisible="True"
+                        ItemInvoked="NavigationView_ItemInvoked">
+
+            <!-- NavBar Menu Items -->
+            <NavigationView.MenuItems>
+
+                <NavigationViewItem x:Name="MainPageNavViewItem"
+                                    Icon="OpenPane"
+                                    Content="View Cameras"/>
+
+                <NavigationViewItem Content="View History"
+                                    Icon="Library"/>
+
+                <NavigationViewItemSeparator/>
+
+
+                
+
+                <!--<NavigationViewItem Content="Nav Item C">
+                    <NavigationViewItem.MenuItems>
+                        <NavigationViewItem Content="Nav Item C Children A"/>
+                        <NavigationViewItem Content="Nav Item C Children B"/>
+                    </NavigationViewItem.MenuItems>
+                </NavigationViewItem>-->
+
+                <!--<NavigationViewItemSeparator/>-->
+                
+            </NavigationView.MenuItems>
+
+            <!-- Footer Pane -->
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem Content="Account" Icon="Contact" />
+                <NavigationViewItem Content="Your Cart" Icon="Shop" />
+                <NavigationViewItem Content="Help" Icon="Help" />
+            </NavigationView.FooterMenuItems>
+
+            <!-- Frame -->
+            <Frame x:Name="ContentFrame"/>
+
+        </NavigationView>
+
+    </Grid>
+
+</Window>

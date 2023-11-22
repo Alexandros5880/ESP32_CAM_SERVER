@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ESP32-SERVER (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ESP32-SERVER (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
